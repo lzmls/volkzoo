@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salesforce Login Custom Frame</title>
+<style>
+  /* Reset and base styles */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+  }
+
+  body {
+    /* Background configuration */
+    background-image: url('https://github.com/lzmls/volkzoo/blob/main/login%20background.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  /* Overlay to ensure text readability if the background is busy */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 27, 78, 0.15); /* Subtle purple tint */
+    z-index: 1;
+  }
+
+  .content-container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Fun Welcome Bubble */
+  .welcome-bubble {
+    background: #FFFFFF;
+    color: #2D1B4E; /* Deep Purple */
+    padding: 18px 30px;
+    border-radius: 25px;
+    border-bottom-left-radius: 4px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 6px 6px 0px #FF5A5F; /* Energetic Coral Shadow */
+    max-width: 80%;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* Mascot Styling */
+  .robot-mascot {
+    max-width: 280px;
+    height: auto;
+    filter: drop-shadow(12px 12px 0px rgba(0, 196, 212, 0.3)); /* Electric Teal Shadow */
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 3px 3px 0px #2D1B4E;
+    letter-spacing: -1px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    background: rgba(45, 27, 78, 0.6);
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  /* Floating animation for the bubble */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Responsive tweaks */
+  @media (max-height: 500px) {
+    .robot-mascot { max-width: 150px; }
+    h1 { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="content-container">
+    <div class="welcome-bubble">Ready to build something awesome today?</div>
+    
+    <!-- Ensure robot logo SF.png is in the same GitHub folder -->
+    <img src="robot logo SF.png" class="robot-mascot" alt="Mascot">
+    
+    <h1>Welcome Back!</h1>
+    <p>Logged in and ready for innovation.</p>
+  </div>
+
+</body>
+</html>
